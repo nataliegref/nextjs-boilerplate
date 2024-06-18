@@ -8,7 +8,8 @@ export default function Counter() {
 
   useEffect(() => {
     // fetch('http:///127.0.0.1:8080/api/home')
-    fetch('/api/home')
+    // fetch('/api/home')
+    fetch('flask-test-neon-omega.vercel.app/model')
       .then(response => response.json())
       .then((data) => {
         setMessage(data.message);
