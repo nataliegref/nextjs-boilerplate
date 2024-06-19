@@ -10,7 +10,7 @@ export default function Counter() {
     // fetch('http:///127.0.0.1:8080/api/home')
     // fetch('/api/home')
     // fetch('https://flask-test-neon-omega.vercel.app/model')
-    fetch("https://34.201.3.4:8080//model", {
+    fetch("https://34.201.3.4:8080/model", {
             
 
     method: 'post',
