@@ -9,10 +9,25 @@ export default function Counter() {
   useEffect(() => {
     // fetch('http:///127.0.0.1:8080/api/home')
     // fetch('/api/home')
-    fetch('https://flask-test-neon-omega.vercel.app/model')
+    // fetch('https://flask-test-neon-omega.vercel.app/model')
+    fetch("http://34.201.3.4:8080//model", {
+            
+
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      fraction: 0.9,
+      size: 1000,
+      weekday: 0,
+      season: 1
+    })
+    })//to here
+
       .then(response => response.json())
       .then((data) => {
-        setMessage(data.message);
+        setMessage(data.average);
       });
   }, []);
 
@@ -24,3 +39,4 @@ export default function Counter() {
     </div>
   )
 }
+
